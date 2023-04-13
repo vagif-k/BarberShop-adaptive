@@ -1,0 +1,49 @@
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header__container {
+  @extend %align-list;
+}
+
+.navigation {
+  @extend %align-list;
+}
+
+.navigation__logo {
+  margin-right: 131px;
+}
+
+.menu {
+  display: flex;
+  gap: 30px;
+}
+
+.menu__link {
+  transition: color 500ms linear;
+  &:hover,
+  &:focus {
+  color: var(--accent-color);
+}
+}
+
+.menu__link,
+.connect__tel {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+
+
+.header__connect {
+  margin-left: auto;
+}
+
+.connect__btn{
+  margin-left: 40px;
+}

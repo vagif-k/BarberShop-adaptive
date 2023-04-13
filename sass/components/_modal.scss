@@ -1,0 +1,161 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.454);
+  transition: opacity 500ms linear, visibility 500ms linear;
+}
+
+.modal {
+  width: 500px;
+  min-height: 500px;
+  background-color: #ffffff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 500ms linear;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.modal-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid red;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  @extend %align-list;
+  justify-content: center;
+  padding: 0;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  padding: 40px;
+}
+
+.modal-title {
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.modal-field {
+  margin-bottom: 20px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 50px;
+  border: 2px solid #555555;
+  border-radius: 10px;
+  font-size: 14px;
+  color: blue;
+  padding-left: 30px;
+  outline-color: transparent;
+  outline-color: transparent;
+  &:focus {
+    border: 2px solid var(--accent-color);
+  }
+  &::placeholder {
+    font-size: 14px;
+    color: #111319;
+  }
+}
+
+.input-wrap {
+  position: relative;
+}
+
+.modal-input-icon {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  left: 10px;
+  .modal-input:focus + & {
+    fill: var(--accent-color);
+  }
+}
+
+.modal-label-text,
+.modal-label,
+.modal-label-tel {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  color: #ff6c00;
+}
+
+.modal-comment {
+  width: 100%;
+  height: 100px;
+  border: 2px solid #ff6c00;
+  border-radius: 10px;
+  resize: none;
+  padding: 10px;
+  &::placeholder {
+    font-size: 14px;
+    color: #111319;
+  }
+}
+
+.check-text {
+  font-size: 14px;
+  color: crimson;
+  @extend %align-list;
+  margin-bottom: 5px;
+}
+
+.check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #090b13;
+  border-radius: 2px;
+  display: block;
+  margin-right: 5px;
+  @extend %align-list;
+  justify-content: center;
+  fill: transparent;
+  .input-check:checked + & {
+    background-color: var(--accent-color);
+    border-color: transparent;
+    fill: #ffffff;
+  }
+  .input-check:focus + & {
+    border-color: var(--accent-color);
+  }
+}
+
+/* ------------icon-check----------- */
+
+/* .check-text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid #090B13;
+  border-radius: 2px;
+  display: block;
+  margin-right: 5px;
+
+}
+
+.input-check:checked+.check-text::before {
+  background-color: var(--accent-color);
+  background-image: url(../images/icon\ check.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  border-color: transparent;
+} */

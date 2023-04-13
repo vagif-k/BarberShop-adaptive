@@ -1,0 +1,13 @@
+.section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.section-title {
+  font-family: 'Raleway', sans-serif;
+  @include font(700, 42px, 1.17, 0.05em);
+  // font-weight: 700;
+  // font-size: 42px;
+  // line-height: 1.17;
+  // letter-spacing: 0.05em;
+}
